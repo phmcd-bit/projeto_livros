@@ -1,0 +1,21 @@
+# dados e banco (não versionar - são grandes e/ou pessoais)
+data/raw/*
+data/interim/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+db/*.sqlite
+db/*.sqlite-wal
+db/*.sqlite-shm
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# jupyter
+.ipynb_checkpoints/
+
+# sistema
+.DS_Store
