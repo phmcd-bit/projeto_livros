@@ -16,7 +16,8 @@ CREATE TABLE IF NOT EXISTS obra (
     editora_fonte   TEXT,
     forma           TEXT,
     premio          TEXT,       -- ex: "International Booker Prize"
-    sinopse         TEXT,       -- NULL até ser preenchida (Fase 1, passo 2)
+    sinopse         TEXT,       -- preenchida manualmente via pesquisa (Fase 1, passo 2)
+    confianca_sinopse TEXT,     -- alta | media | baixa
     UNIQUE(titulo, autor)
 );
 
@@ -30,7 +31,9 @@ CREATE TABLE IF NOT EXISTS leitura (
     editora         TEXT,
     porte_editora   TEXT,
     pais_autor      TEXT,
-    forma           TEXT
+    forma           TEXT,
+    sinopse         TEXT,       -- preenchida manualmente via pesquisa (Fase 1, passo 2)
+    confianca_sinopse TEXT      -- alta | media | baixa
 );
 
 CREATE INDEX IF NOT EXISTS idx_obra_pais   ON obra(pais_autor);
